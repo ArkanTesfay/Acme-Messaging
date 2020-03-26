@@ -9,8 +9,20 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
+
+    
+  <div class="ui two column doubling stackable  container">
+    
     <%= render 'layouts/navbar' %>
+    <%= render 'layouts/msg' %>
+    <%= render 'layouts/errors' %>
     <%= yield %>
+
+    
+
+     </div>
+
   </body>
 </html>
