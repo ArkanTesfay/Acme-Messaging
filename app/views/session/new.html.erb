@@ -1,0 +1,29 @@
+<h1>Login</h1>
+<%= form_for(:session, url:login_path) do |f|  %>
+<div class="ui placeholder segment">
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <div class="ui form">
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <div class="ui  input">
+            <%= f.text_field :email, class: "ui  input" %>
+          </div>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <div class="ui  input">
+            <%= f.password_field :password, class: "ui  input"%>
+          </div>
+        </div>
+        <%= f.submit "Login", class: "submit-button ui blue submit button" %>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+
+<% end %>
+

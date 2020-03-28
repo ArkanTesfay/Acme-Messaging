@@ -1,16 +1,23 @@
 <div class="ui    menu">
+  <% if logged_in %>
+
+  <%= link_to "Chat", chatroom_path, class: "item" %>
   
-  <%= link_to "Home", root_path, class: "red item" %>
-  <a class="item">
-    Messages
-  </a>
-  <a class=" red item">
-    Friends
-  </a>
+
+  <%= link_to "Friends", users_path, class: "red item" %>
+
+
+
+  <% end %>
+
+
   <div class="right menu">
-    
-    <a class=" red ui item">
-      Logout
-    </a>
+
+    <% if logged_in %>
+
+    <%= link_to "Logout", logout_path, class: "red ui item", method: :delete %>
+    <% else %>
+    <%= link_to "LogIn", login_path, class: "red ui item" %>
+  <% end %>
   </div>
 </div>

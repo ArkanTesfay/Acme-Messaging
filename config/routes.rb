@@ -4,9 +4,18 @@ Rails.application.routes.draw do
   root "home#home"
   get "signup", to:"users#signup"
 
+  get "login", to: "session#new"
+  post "login", to:"session#create"
+
+  delete "logout", to: "session#destroy"
+
+  post 'chatroom', to:"messages#create"
+  get  'chatroom', to:"messages#index"
+  get  'chatroom', to:"messages#new"
 
 
   resources :users, except:[:new]
+
 
    
 end
