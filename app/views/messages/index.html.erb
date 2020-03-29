@@ -1,13 +1,6 @@
-<div class="ui grid chat-box">
-  <div class="four wide column">
-    <div class="ui link list">
-  <div class="active item">Home</div>
-  <a class="item">About</a>
-  <a class="item">Jobs</a>
-  <a class="item">Team</a>
-</div>
-  </div>
-  <div class="twelve wide stretched column">
+<div class="ui grid ">
+  
+  <div class="twelve wide stretched column " style="height: 700px; "> 
     <div class="ui segment">
       <% @message.each do |msg| %>
         <div class="event">
@@ -19,6 +12,20 @@
   
         </div> 
         <% end %>
+    </div>
+
+    <div>
+      <%= form_for(@message , url:chatroom_path) do |f|  %>
+      <div class="ui fluid action input" style="height: 50px;">
+      <%= f.text_field :body , class: "ui fluid action input"  %>
+      <%= f.submit "Send", class: "ui button" %>
+      </div>
+      <% end %>
+    </div>
+
+  
+
   </div>
-  </div>
+
+
 </div>
