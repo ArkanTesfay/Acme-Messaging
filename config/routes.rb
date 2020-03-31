@@ -9,8 +9,8 @@ Rails.application.routes.draw do
 
   delete "logout", to: "session#destroy"
 
-  get  'chatroom', to:"messages#index"
-  post 'chatroom', to:"messages#create"
+  get  'chatroom', to:"chatroom#index"
+  post 'message', to:"messages#create"
   
 
 

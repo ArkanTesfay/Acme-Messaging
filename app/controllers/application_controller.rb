@@ -17,10 +17,10 @@ class ApplicationController < ActionController::Base
 	end
 
 
-	def require_same_user
+	def require_user
 
 		if !logged_in
-			flash[:notice]="Only same user should be able to perform this action"
+			flash[:notice]="You Must log in to Use this feature"
 
 			redirect_to root_path
 			

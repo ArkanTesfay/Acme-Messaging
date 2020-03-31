@@ -1,34 +1,26 @@
 class MessagesController < ApplicationController
 
+
+
 	def message_params
-
 		params.require(:message).permit(:body)
-		
 	end
 
-	def index
-		@message=Message.new
-		@message=Message.all
-	
-	end
 
 	def create
-		@message=Message.create(message_params)
-		@message.user_id=current_user
+		@message=current_user.messages.build(message_params)
+
 		if @message.save
+			flash[:notice]="Delivered"
 			redirect_to chatroom_path
-			
-			else
+		else
+			flash[:notice]="Failed"
 
-				render 'index'
+			render 'message_failed'
+
 		end
+		
 	end
-
-	
-
-
-	
-
 
 
 

@@ -1,0 +1,24 @@
+<div class="ui grid fluid ">
+  
+  <div class="sixteen wide stretched column " style="height: 700px; "> 
+    <div class="ui segment">
+        <%= render @messages %>
+    </div>
+
+
+    <div>
+      <%= form_for(@message , url:message_path) do |f|  %>
+      <div class="ui fluid  input" style="height: 50px;">
+      <%= f.text_field :body , class: "ui fluid action input"  %>
+      <%= f.submit "Send", class: "ui primary  button" %>
+      </div>
+      <% end %>
+    </div>
+
+
+  
+
+  </div>
+
+
+</div>
