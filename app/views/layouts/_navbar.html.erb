@@ -7,10 +7,13 @@
 
   <%= link_to "Acme-Users", users_path, class: "red item" %>
 
+  <% else %>
+
+<% end %>
 
 
 
-
+<% if logged_in %>
 
   <div class="right menu">
 
@@ -19,5 +22,6 @@
   </div>
 
 </div>
+<% else %>
 
 <% end %>
