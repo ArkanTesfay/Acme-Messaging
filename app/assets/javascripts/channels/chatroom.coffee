@@ -1,0 +1,8 @@
+App.chatroom = App.cable.subscriptions.create "ChatroomChannel",
+  connected: ->
+
+  disconnected: ->
+
+  received: (data) ->
+    $('#message-box').append data.msg
+    scroll_bottom()

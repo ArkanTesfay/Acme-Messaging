@@ -1,23 +1,23 @@
+<% if logged_in %>
 <div class="ui    menu">
-  <% if logged_in %>
+
 
   <%= link_to "Chat", chatroom_path, class: "item" %>
-  
-
-  <%= link_to "Friends", users_path, class: "red item" %>
 
 
+  <%= link_to "Acme-Users", users_path, class: "red item" %>
 
-  <% end %>
+
+
+
 
 
   <div class="right menu">
 
-    <% if logged_in %>
-
+    <a class="ui teal tag label"><%= current_user.username.capitalize %></a>
     <%= link_to "Logout", logout_path, class: "red ui item", method: :delete %>
-    <% else %>
-    <%= link_to "LogIn", login_path, class: "red ui item" %>
-  <% end %>
   </div>
+
 </div>
+
+<% end %>

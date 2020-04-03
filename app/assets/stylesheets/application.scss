@@ -1,1 +1,24 @@
 @import "semantic-ui";
+
+
+.home{
+  background-image:linear-gradient(rgba(0, 5, 255, 0.5), rgba(255, 255, 0, 0.5));
+  height: 750px;
+}
+.home h1{
+  text-align: center;
+  padding-top: 300px;
+  font-size: 40px;
+}
+
+#buttons{
+  margin-top: 50px;
+  margin-left: 2px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+body{
+  background-image:linear-gradient(rgba(0, 5, 255, 0.5), rgba(255, 255, 0, 0.5));
+
+}

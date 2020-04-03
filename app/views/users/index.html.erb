@@ -1,8 +1,10 @@
 <%  @users.each do |user| %>
 
-<ul>
-	<li><%= user.username %></li>
-</ul>
+<div class="ui divided selection list">
+  <a class="item">
+    <div class="ui red horizontal label"><%= user.username.capitalize %></div>
+  </a>
+</div>
 
 
 <% end %>
