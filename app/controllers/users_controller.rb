@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
 
 
+	protect_from_forgery :except => [:signup,:create,:index,:user_params]
 
 	def signup
 		@users=User.new
