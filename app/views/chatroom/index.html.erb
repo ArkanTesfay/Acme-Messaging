@@ -10,6 +10,7 @@
 
     <div>
       <%= form_for(@message , url:message_path, remote:true) do |f|  %>
+      <%= token_tag(nil) %>
       <div class="ui fluid  input" style="height: 50px;">
       <%= f.text_field :body ,placeholder:"enter message" %>
       <%= f.button "Send", class: "ui inverted yellow  right floated button".html_safe %>

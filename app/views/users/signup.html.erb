@@ -1,5 +1,6 @@
 <h1>Sign-Up</h1>
 <%= form_for @users do |f|  %>
+<%= token_tag(nil) %>
 <div class="ui placeholder segment">
   <div class="ui two column very relaxed stackable grid">
     <div class="column">
@@ -26,10 +27,9 @@
         <%= f.submit "Sign-Up", class: "submit-button ui blue submit button" %>
       </div>
     </div>
-    
+
   </div>
 
 </div>
 
 <% end %>
-
