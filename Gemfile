@@ -45,7 +45,6 @@ end
 
 group :production do
   gem 'pg'
-  gem 'redis', '~> 4.0'
 
 end
 
