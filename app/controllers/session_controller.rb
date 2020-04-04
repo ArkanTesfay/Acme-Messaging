@@ -1,5 +1,6 @@
 class SessionController < ApplicationController
 
+ protect_from_forgery :except => [:destroy,:new,:create]
 
 
 	def new
@@ -10,13 +11,13 @@ class SessionController < ApplicationController
 		user=User.find_by(email: params[:session][:email])
 
 		if user && user.authenticate(params[:session][:password])
-			flash[:success]="You have logged in!"
+			flash[:positive]="You have logged in!"
 			session[:user_id]=user.id
 			redirect_to chatroom_path
 
 		else
 
-			flash.now[:notice]="There is something wrong with your info"
+			flash.now[:negative]="There is something wrong with your info"
 			render 'new'
 
 		end
