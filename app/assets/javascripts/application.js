@@ -19,7 +19,7 @@
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
-
+//= require_tree ./channels
 scroll_bottom = function() {
   if ($('#messages').length > 0) {
     $('#messages').scrollTop($('#messages')[0].scrollHeight);
