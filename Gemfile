@@ -45,7 +45,6 @@ group :production do
   gem 'pg'
   gem 'puma', '~> 3.11'
   gem 'redis', '~> 4.0'
-  gem 'rails_12factor'
 end
 
 group :development do
