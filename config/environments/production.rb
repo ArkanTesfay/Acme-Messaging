@@ -42,7 +42,7 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Mount Action Cable outside main process or domain
-  config.action_cable.mount_path = '/cable'
+  #config.action_cable.mount_path = '/cable'
   config.web_socket_server_url = "wss://acme-messaging.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://acme-messaging.herokuapp.com', 'http://acme-messaging.herokuapp.com']
 
