@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") {"redis://redistogo:ef80629b4b764b1f89a569e71ea01b3c@pike.redistogo.com:10330/""} %>
+  url: <%= ENV.fetch("REDIS_URL") {"redis://redistogo:ef80629b4b764b1f89a569e71ea01b3c@pike.redistogo.com:10330/"} %>
   channel_prefix: Acme-Messaging_production
