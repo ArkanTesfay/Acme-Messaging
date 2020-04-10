@@ -3,9 +3,7 @@ class MessagesController < ApplicationController
 	protect_from_forgery :except => [:message_params,:message_render,:create]
 
 	before_action :require_user
-	def message_params
-		params.require(:message).permit(:body)
-	end
+
 
 	def create
 
@@ -13,8 +11,14 @@ class MessagesController < ApplicationController
 
 		if message.save
 			ActionCable.server.broadcast "chatroom_channel", msg:message_render(message)
+			redirect_to chatroom_path
 		end
 
+	end
+
+	private
+	 def message_params
+		params.require(:message).permit(:body)
 	end
 
 	def message_render(message)
