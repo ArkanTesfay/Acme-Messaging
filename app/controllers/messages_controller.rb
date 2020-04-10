@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
 
 		if message.save
 			ActionCable.server.broadcast "chatroom_channel", msg:message_render(message)
-			redirect_to chatroom_path
+			#redirect_to chatroom_path
 		end
 
 	end
