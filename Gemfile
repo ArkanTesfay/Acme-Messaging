@@ -26,13 +26,10 @@ gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
- gem 'bcrypt', '~> 3.1.7'
- gem 'hirb'
+gem 'bcrypt', '~> 3.1.7'
+gem 'hirb'
 
-gem 'sidekiq'
-gem 'sinatra', git: 'https://github.com/sinatra/sinatra', :require => nil
 
-# Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
@@ -56,6 +53,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
