@@ -4,4 +4,5 @@ App.chatroom = App.cable.subscriptions.create "ChatroomChannel",
   disconnected: ->
 
   received: (data) ->
-    $('#message-box').append data.msg
+    #$('#message-box').append data.msg
+    alert data
