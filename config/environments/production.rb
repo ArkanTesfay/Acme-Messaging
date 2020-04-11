@@ -91,5 +91,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.web_socket_server_url = "ws://acme-messaging.herokuapp.com/cable"
 
-  config.action_cable.allowed_request_origins = ['https://acme-messaging.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://acme-messaging.herokuapp.com','http://acme-messaging.herokuapp.com']
 end
